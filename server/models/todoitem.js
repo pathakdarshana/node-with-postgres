@@ -5,7 +5,6 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.STRING,
       allowNull: false,
     },
-
     complete:  {
       type: DataTypes.BOOLEAN,
       defaultValue: false,
@@ -13,7 +12,7 @@ module.exports = (sequelize, DataTypes) => {
   });
 
   TodoItem.associate = (models) => {
-    TodoItems.belongsTo(models.Todo, {
+    TodoItem.belongsTo(models.Todo, {
       foreignKey: 'todoId',
       onDelete: 'CASCADE',
     });

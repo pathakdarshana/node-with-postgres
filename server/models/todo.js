@@ -8,7 +8,7 @@ module.exports = (sequelize, DataTypes) => {
   });
 
   Todo.associate = (models) => {
-    Todo.hasMany(models.TodoItems, {
+    Todo.hasMany(models.TodoItem, {
       foreignKey: 'todoId',
       as: 'todoItems',
     });
